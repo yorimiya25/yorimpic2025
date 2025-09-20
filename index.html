@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YORIMPIC2025</title>
+<style>
+  body {
+    font-family: "Noto Sans JP", sans-serif;
+    margin: 0;
+    padding-top: 70px; /* 左上固定ロゴの余白 */
+    background-color: #f7f7f7; /* 全体背景は白系のまま */
+    color: #333;
+    line-height: 1.6;
+  }
+
+  /* 左上固定＋アニメーション */
+  .school-logo {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: #fff; /* ロゴ白背景 */
+    color: #5865F2;   /* アクセント色変更 */
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.6s ease-out;
+  }
+
+  .school-logo.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  header {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: #5865F2; /* オレンジ→青紫 */
+    color: #fff;
+  }
+
+  header h1 {
+    margin: 0.5rem 0;
+  }
+
+  .header-image {
+    margin-top: 1rem;
+  }
+
+  .header-image img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    transition: transform 0.5s ease;
+  }
+
+  .header-image img:hover {
+    transform: scale(1.05);
+  }
+
+  section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background: #fff; /* セクションは白 */
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  }
+
+  h2 { 
+    color: #5865F2; /* オレンジ→青紫 */
+    margin-top: 1.5rem;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+  }
+
+  .program li {
+    margin-bottom: 0.5rem;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background: #5865F2; /* オレンジ→青紫 */
+    color: #fff;
+    margin-top: 2rem;
+  }
+</style>
+</head>
+<body>
+
+  <!-- 左上固定 -->
+  <div class="school-logo" id="school-logo">
+    寄宮中学校「学・思・貫」
+  </div>
+
+  <script>
+    const logo = document.getElementById('school-logo');
+
+    // スクロールでロゴをフェードイン
+    window.addEventListener('scroll', () => {
+      if(window.scrollY > 50){
+        logo.classList.add('show');
+      } else {
+        logo.classList.remove('show');
+      }
+    });
+
+    // ページ読み込み時にもフェードイン
+    window.addEventListener('load', () => {
+      logo.classList.add('show');
+    });
+
+    // ロゴクリックでページ上部にスムーズスクロール
+    logo.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+
+<header>
+  <h1>YORIMPIC2025</h1>
+  <p>仲間と力を合わせ、全力で競い合い、楽しむ一日。生徒の個性が光る演技や競技にぜひご注目ください！</p>
+  <div class="header-image">
+    <img src="https://cdn.discordapp.com/attachments/1398315098182783109/1418936694761324614/IMG_1987.jpg?ex=68cfef46&is=68ce9dc6&hm=c1c94e543d1035f199f3815c203ff2503e9cfd4d0ccfd385f06d9a8505952419&" alt="YORIMPIC2025">
+  </div>
+</header>
+
+<section>
+  <h2>📅 日程・場所</h2>
+  <p>2025年 ○月○日（土） 8:45～14:00</p>
+  <p>場所：寄宮中学校 校庭</p>
+</section>
+
+<section>
+  <h2>🏅 プログラム</h2>
+  <ul class="program">
+    <li><strong>開会式（8:45～9:05）</strong>
+      <ul>
+        <li>オープニングパフォーマンス</li>
+        <li>生徒会長あいさつ</li>
+        <li>選手宣誓</li>
+        <li>各団応援</li>
+        <li>生活体育委員会より</li>
+      </ul>
+    </li>
+
+    <li><strong>競技・演技</strong>
+      <ul>
+        <li>学年対抗リレー（9:05～） 1年・2年・3年の走力と団結力に注目！</li>
+        <li>生徒会種目（10:15～） 各団の団長やリーダー達が考えたオリジナル競技を実施！</li>
+        <li>集団演技（11:25～） 空手・ダンスを中心に、授業で培った成果を披露します。※記念撮影あり</li>
+      </ul>
+    </li>
+
+    <li><strong>閉会式（12:15～）</strong>
+      <ul>
+        <li>結果発表</li>
+        <li>表彰</li>
+        <li>校長講評</li>
+        <li>終わりの言葉</li>
+      </ul>
+    </li>
+
+    <li><strong>給食・帰りの会（13:15～）</strong> その後、片付けを行い終了予定です。</li>
+  </ul>
+</section>
+
+<section>
+  <p>「YORIMPIC2025」は、生徒一人ひとりが輝く舞台です。ぜひご来場いただき、熱い応援をよろしくお願いいたします！</p>
+</section>
+
+<footer>
+  <p>寄宮中学校 © 2025</p>
+</footer>
+
+<script>
+  // スクロールでロゴをフェードイン
+  window.addEventListener('scroll', () => {
+    const logo = document.querySelector('.school-logo');
+    if(window.scrollY > 50) {
+      logo.classList.add('show');
+    } else {
+      logo.classList.remove('show');
+    }
+  });
+
+  // ページ読み込み時にもフェードイン
+  window.addEventListener('load', () => {
+    document.querySelector('.school-logo').classList.add('show');
+  });
+</script>
+
+</body>
+</html>
